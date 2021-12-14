@@ -1,0 +1,131 @@
+#faq {
+  .faq-mainvisual {
+    @include mainvisual("../images/bg_faq.png");
+    .faq-mainvisual-box {
+      @include mainvisual-box($dark-red);
+    }
+  }
+  .bg-text-even_faq {
+    @include bg-text-even();
+  }
+  .faq-main {
+    width: 100%;
+    .faq-box {
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      font-family: $japanese;
+      line-height: 1.75;
+      padding: 18px 2rem 24px;
+      margin: 2rem auto 0;
+      max-width: 44rem;
+      width: 100%;
+      @include sm {
+        padding: 2.5rem 6rem 34px;
+        max-width: none;
+      }
+      @include md {
+        width: 65rem;
+        padding: 2.5rem 6rem 45px;
+        margin: 5rem 0 0;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &-question {
+        display: flex;
+        font-size: 1.6rem;
+        @include sm {
+          font-size: 2rem;
+        }
+        @include md {
+          font-size: 2.4rem;
+        }
+        &-text {
+          padding-top: 0.8rem;
+          @include md {
+            padding-top: 2rem;
+          }
+        }
+        &-q {
+          font-family: $english;
+          margin-right: 8px;
+          font-size: 2.4rem;
+          @include sm {
+            font-size: 3rem;
+            margin-right: 1.6rem;
+          }
+          @include md {
+            font-size: 4rem;
+            padding-top: 0.5rem;
+          }
+          
+        }
+      }
+      &-answer {
+        display: flex;
+        font-size: 1.1rem;
+        margin-top: 0.3rem;
+        position: relative;
+        @include sm {
+          margin-top: 0;
+          font-size: 1.2rem;
+        }
+        @include md {
+          margin-top: 1.2rem;
+          font-size: 1.4rem;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: 50%;
+          transform: translate(-50%,0);
+          width: 5rem;
+          height: 3px;
+          background-color: #8D2659;
+          @include md {
+            width: 7rem;
+            height: 4px;
+          }
+        }
+        &-text {
+          padding-top: 1.3rem;
+          @include sm {
+            padding-top: 1.6rem;
+            width: calc(100% - 5.5rem);
+          }
+          @include md {
+            padding-top: 2.8rem;
+          }
+        }
+        &-a {
+          color: $dark-red;
+          margin-right: 8px;
+          font-family: $english;
+          font-size: 2.4rem;
+          @include sm {
+            font-size: 3rem;
+            margin-right: 1.6rem;
+          }
+          @include md {
+            font-size: 4rem;
+          }
+        }
+        .faq-text-br {
+          @include xs {
+            display: none;
+          }
+          @include sm {
+            display: block;
+          }
+        }
+      }
+      &:nth-child(even) {
+        @include md {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

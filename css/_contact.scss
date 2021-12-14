@@ -1,0 +1,151 @@
+#contact {
+  position: relative;
+  margin-bottom: 0;
+  .contact-mainvisual {
+    @include mainvisual("../images/bg_contact.png");
+    .contact-mainvisual-box {
+      @include mainvisual-box(#818284);
+    }
+  }
+  .bg-text-even_contact {
+    @include bg-text-even();
+  }
+}
+.contact-reqruit-wrapper {
+  background: linear-gradient(to right,#fff,#fff 30%,#F7F7F7 30%, #F7F7F7);
+  padding: 60px 0;
+  @include md {
+    padding: 80px 0;
+  }
+  &.event-contact {
+    background: linear-gradient(to right,#fff,#fff 30%,#FFE2E2 30%, #FFE2E2);
+    margin-top: 40px;
+  }
+  .contact-reqruit-contents {
+    font-family: $japanese;
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+    }
+    .reqruit-main-text {
+      line-height: 1.5;
+      font-size: 24px;
+      @include xxs {
+        font-size: 27px;
+      }
+      @include xs {
+        font-size: 34px;
+      }
+      @include md {
+        font-size: 44px;
+      }
+      @include lg {
+        margin-top: -12px;
+      }
+      span {
+        display: inline-block;
+        color: #fff;
+        background-color: #000;
+        padding: 3px 8px;
+        margin-right: 8px;
+      }
+    }
+    .recruit-text-list {
+      .recruit-text-item {
+        font-size: 12px;
+        line-height: 1.75;
+        display: flex;
+        align-items: center;
+        @include md {
+          font-size: 14px;
+        }
+        img {
+          width: 10px;
+          margin-right: 10px;
+        }
+        span {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+  .reqruit-sub-texts,
+  .contact-wrapper {
+    width: 100%;
+    margin: 40px 0 0 auto;
+    @include xs {
+      width: 38rem;
+    }
+    @include md {
+      width: 50rem;
+    }
+    @include lg {
+      width: calc(100% - 56rem);
+      margin: 0;
+    }
+  }
+  .reqruit-sub-text {
+    font-size: 12px;
+    line-height: 1.75;
+    margin-top: 18px;
+    @include sm {
+      margin-top: 25px;
+    }
+    @include md {
+      font-size: 14px;
+    }
+    &.text-contact {
+      margin-top: 0;
+    }
+  }
+  .recruit-btn {
+    display: block;
+    margin-top: 18px;
+    @include sm {
+      margin-top: 25px;
+    }
+    &:hover {
+      opacity: .7;
+      transition: .3s;
+    }
+  }
+  .contact-form {
+    font-family: $english;
+    input {
+      display: block;
+      height: 5rem;
+    }
+    textarea {
+      resize: none;
+      line-height: 1.7;
+    }
+    input,textarea {
+      background-color: #fff;
+      width: 100%;
+      padding: 20px 15px 18px;
+      margin-top: 20px;
+      border: 1px solid #bebebe;
+      font-size: 16px;
+      &::placeholder {
+        color: #bebebe;
+        font-size: 16px;
+      }
+    }
+    .submit-btn {
+      background-color: #C10305;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 24rem;
+      padding: 18px 20px;
+      margin: 20px 0 0;
+      font-family: $japanese;
+      font-size: 16px;
+      &:hover {
+        opacity: .7;
+        transition: .3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+#message {
+  position: relative;
+  .message_main {
+    padding: 0 1.5rem;
+    width: auto;
+    margin: 6.8vw auto 0;
+    @include sm {
+      margin: 48px auto 0;
+    }
+    @include md {
+      margin: 6rem auto 0;
+    }
+    @include lg {
+      margin: 7rem auto 0;
+    }
+  }
+  .message-box {
+    font-family: $japanese;
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_left {
+      position: relative;
+      z-index: 20;
+      line-height: 1.5;
+      font-size: 2.4rem;
+      @include xxs {
+        font-size: 2.7rem;
+      }
+      @include xs {
+        font-size: 4.8vw;
+      }
+      @include sm {
+        font-size: 3.4rem;
+      }
+      @include md {
+        font-size: 44px;
+        margin: 0 auto;
+        width: 77rem;
+      }
+      @include lg {
+        margin: 0;
+        width: auto;
+      }
+      .message-concept {
+        @include lg {
+          margin-top: -8px;
+        }
+        .message_br {
+          @include xs {
+            display: none;
+          }
+          @include md {
+            display: none;
+          }
+          @include lg {
+            display: block;
+          }
+        }
+      }
+    }
+    &_right {
+      position: relative;
+      z-index: 20;
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.75;
+      padding-top: 2.5rem;
+      max-width: 44rem;
+      margin: 0 auto;
+      @include sm {
+        max-width: 50rem;
+        font-size: 1.4rem;
+      }
+      @include md {
+        padding-top: 4rem;
+        line-height: 2;
+      }
+      @include lg {
+        width: calc(100% - 534px);
+        margin: 0 0 0 auto;
+        padding-top: 0;
+      }
+      .message-text {
+        padding-bottom: 1.8rem;
+        @include sm {
+          padding-bottom: 2.5rem;
+        }
+        &:nth-child(3) {
+          color: #c10305;
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

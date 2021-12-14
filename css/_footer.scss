@@ -1,0 +1,72 @@
+.footer {
+  color: white;
+  font-family: $japanese;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  @include md {
+    padding: 3rem 0;
+  }
+  .footer-pagetop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -25px;
+    right: 2rem;
+    background-color: #fff;
+    border: 1px solid #C10305;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    @include sm {
+      top: -35px;
+      width: 7rem;
+      height: 7rem;
+    }
+    @include lg {
+      right: 5rem;
+    }
+    .fa-chevron-up {
+      font-size: 13px;
+      color: #C10305;
+      @include sm {
+        font-size: 16px;
+      }
+    }
+    &:hover {
+      background-color: #C10305;
+      transition: .3s;
+      .fa-chevron-up {
+        color: #fff;
+      }
+    }
+  }
+  .footer-logo {
+    .footer-logo-link {
+      display: inline-block;
+      img {
+        height: 7rem;
+        width: 7rem;
+        @include md {
+          height: 10rem;
+          width: 10rem;
+        }
+      }
+      &:hover {
+        opacity: .7;
+        transition: .3s;
+      }
+    }
+  }
+  small {
+    display: inline-block;
+    margin-top: 15px;
+    line-height: 1.5;
+    @include md {
+      margin-top: 2rem;
+    }
+  }
+}

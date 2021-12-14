@@ -1,0 +1,103 @@
+#movies {
+  font-family: $japanese;
+  .movies-mainvisual {
+    @include mainvisual("../images/bg_movies.png");
+    .movies-mainvisual-box {
+      @include mainvisual-box(#801617);
+    }
+  }
+  .bg-text-even_movies {
+    @include bg-text-even();
+  }
+  .movie-contents {
+    width: 100%;
+    @include lg {
+      width: auto;
+    }
+    .movie-main {
+      display: flex;
+      flex-direction: column;
+      max-width: 44rem;
+      margin: 0 auto;
+      @include sm {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: none;
+        margin: 0;
+      }
+      .movies-box {
+        @include xxs {
+          width: 100%;
+        }
+        @include sm {
+          margin: 0;
+          width: calc((100% - 2rem)/2);
+        }
+        @include lg {
+          width: calc((100% - 5rem)/2);
+        }
+        &:nth-child(2) {
+          margin-top: 2rem;
+          @include sm {
+            margin-top: 0;
+          }
+        }
+        &:nth-child(n+3) {
+          margin-top: 2rem;
+          @include lg {
+            margin-top: 5rem;
+          }
+        }
+        .movies-box-youtube {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-top: 56%;
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .movies-text-box {
+          font-size: 1.6rem;
+          text-align: center;
+          font-weight: bold;
+          padding: 18px 5px;
+          border: 2px solid #f4f4f4;
+          border-top: none;
+          @include sm {
+            font-size: 1.3rem;
+          }
+          @include md {
+            font-size: 1.6rem;
+            padding: 25px 5px;
+          }
+          @include lg {
+            font-size: 2rem;
+          }
+          .movies-box-text_title {
+            line-height: 1.5;
+            margin-bottom: 6px;
+          }
+          .movies-box-text_subtext {
+            color: $gray;
+            font-size: 0.65em;
+            line-height: 1.5;
+            .movie-text-br {
+              @include sm {
+                display: none;
+              }
+              @include md {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

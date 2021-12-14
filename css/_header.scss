@@ -1,0 +1,240 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  height: 8.4rem;
+  line-height: 8.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include xxs {
+    padding-left: 1.8rem;
+  }
+  @include sm {
+    padding-left: 0;
+    color: white;
+    display: block;
+    background-color: transparent;
+  }
+  .header-sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 0.8rem;
+    @include sm {
+      display: none;
+    }
+    &_left {
+      display: flex;
+      align-items: center;
+      @include sm {
+        display: none;
+      }
+      .header-sp_logo {
+        width: 6rem;
+        height: 6rem;
+        @include xs {
+          width: 6.8rem;
+          height: 6.8rem;
+        }
+        @include sm {
+          width: 9rem;
+          height: 9rem;
+        }
+      }
+      &_text {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        line-height: 1.4rem;
+        display: block;
+        margin-left: 0.5rem;
+        @include xxs {
+          font-size: 1rem;
+          margin-left: 1.2rem;
+        }
+      }
+    }
+    &_right {
+      width: 70px;
+      height: 100%;
+      background-color: #C10305;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include xxs {
+        width: 90px;
+      }
+      .menu-inner {
+        position: relative;
+        z-index: 102;
+        width: 40px;
+        height: 36px;
+        .menu-line {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+          transition: ease 0.65s;
+          &:nth-of-type(1) {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 9px;
+          }
+          &:nth-of-type(3) {
+            top: 18px;
+          }
+        }
+        .menu-text {
+          position: absolute;
+          bottom: 0;
+          color: #fff;
+          font-size: 1rem;
+          letter-spacing: 1.4px;
+          line-height: 1;
+        }
+      }
+    }
+    .rotate {
+      .menu-line {
+        &:first-child,
+        &:nth-child(3) {
+          top: 16px;
+        }
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+      .menu-text {
+        display: none;
+      }
+    }
+  }
+  .header-nav {
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/mainvisual_01.jpg');
+    background-size: cover;
+    background-position: 37% center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: scroll;
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transition: .5s;
+    }
+    @include sm {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      background-image: none;
+      position: static;
+      width: calc(100% - 160px);
+      margin-left: auto;
+      overflow: auto;
+    }
+    @include md {
+      width: calc(100% - 200px);
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 101;
+      @include sm {
+        display: none;
+      }
+    }
+    .nav-list {
+      position: absolute;
+      z-index: 102;
+      display: flex;
+      flex-direction: column;
+      margin-top: 8rem;
+      @include sm {
+        position: static;
+        justify-content: flex-end;
+        flex-direction: row;
+        margin-top: 0;
+      }
+      .nav-item {
+        line-height: 3.2;
+        padding-left: 3rem;
+        @include sm {
+          line-height: 8.4rem;
+          padding-left: 0;
+          margin-right: 3rem;
+        }
+        @include md {
+          margin-right: 4rem;
+        }
+        &:first-child,
+        &:nth-child(9),
+        &:nth-child(10) {
+          @include sm {
+            display: none;
+          }
+        }
+        .nav-link {
+          display: flex;
+          align-items: center;
+        }
+        .nav-en {
+          display: block;
+          font-family: $english;
+          letter-spacing: 0.05em;
+          font-size: 17px;
+          color: #fff;
+          @include sm {
+            font-size: 11px;
+          }
+          @include md {
+            font-size: 14px;
+          }
+          &.change {
+            @include sm {
+              color: #000;
+            }
+          }
+        }
+        .nav-jp {
+          font-family: $japanese;
+          color: #fff;
+          padding-left: 12px;
+          @include sm {
+            display: none;
+          }
+        }
+        .nav-en,
+        .nav-jp {
+          &:hover {
+            color: #C10305;
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
+}

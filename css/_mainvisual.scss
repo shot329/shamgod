@@ -1,0 +1,94 @@
+.mainvisual {
+  position: relative;
+  .mainvisual_box {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    font-family: $japanese;
+    color: #f7f7f7;
+    font-weight: normal;
+    letter-spacing: .1em;
+    bottom: 9rem;
+    @include lg {
+      bottom: 4rem;
+    }
+    &_text {
+      background-color: rgba(193, 3, 5, 0.8);
+      padding: 5px;
+      font-size: 13px;
+      @include xxs {
+        padding: 8px;
+        font-size: 18px;
+      }
+      @include xs {
+        font-size: 2rem;
+      }
+      @include sm {
+        font-size: 24px;
+      }
+      @include md {
+        font-size: 3rem;
+        padding: 1rem;
+      }
+      &:first-child {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  .kv-slider-list {
+    img {
+      height: calc(100vh - 84px);
+      object-fit: cover;
+      margin-top: 84px;
+      display: block;
+      @include sm {
+        margin-top: 0;
+        height: 100vh;
+      }
+    }
+  }
+}
+.scrolldown {
+  position:absolute;
+  left:50%;
+  bottom:10px;
+  height:50px;
+  span {
+    position: absolute;
+    left:-15px;
+    top: -15px;
+    font-family: $english;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 30px;
+    background: #fff;
+    animation: pathmove 2s ease-in-out infinite;
+    opacity:0;
+  }
+}
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
