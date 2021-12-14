@@ -1129,18 +1129,12 @@ template {
 .mainvisual .mainvisual_box_text {
   background-color: rgba(193, 3, 5, 0.8);
   padding: 5px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 @media (min-width: 360px) {
   .mainvisual .mainvisual_box_text {
     padding: 8px;
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 480px) {
-  .mainvisual .mainvisual_box_text {
     font-size: 2rem;
   }
 }
@@ -1168,7 +1162,7 @@ template {
 }
 
 .mainvisual .kv-slider-list img {
-  height: calc(100vh - 84px);
+  height: calc(100vh - 84px - 10rem);
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 84px;

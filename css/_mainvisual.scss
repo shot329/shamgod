@@ -15,12 +15,9 @@
     &_text {
       background-color: rgba(193, 3, 5, 0.8);
       padding: 5px;
-      font-size: 13px;
+      font-size: 15px;
       @include xxs {
         padding: 8px;
-        font-size: 18px;
-      }
-      @include xs {
         font-size: 2rem;
       }
       @include sm {
@@ -41,7 +38,7 @@
   }
   .kv-slider-list {
     img {
-      height: calc(100vh - 84px);
+      height: calc(100vh - 84px - 10rem);
       object-fit: cover;
       margin-top: 84px;
       display: block;
