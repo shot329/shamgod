@@ -1154,7 +1154,7 @@ template {
 
 .mainvisual .mainvisual_box_text:first-child {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
 }
 
 .mainvisual .mainvisual_box_text:last-child {
