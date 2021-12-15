@@ -1487,7 +1487,7 @@ template {
 #movies .movies-mainvisual {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/bg_movies.png");
+  background-image: url("../images/bg_movies.jpg");
   position: relative;
   background-position: center;
   height: 25rem;
@@ -2017,7 +2017,7 @@ template {
 #history .history-mainvisual {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/bg_history.png");
+  background-image: url("../images/bg_history.jpg");
   position: relative;
   background-position: center;
   height: 25rem;
@@ -2607,7 +2607,7 @@ template {
 #faq .faq-mainvisual {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/bg_faq.png");
+  background-image: url("../images/bg_faq.jpg");
   position: relative;
   background-position: center;
   height: 25rem;
@@ -2931,7 +2931,7 @@ template {
 #contact .contact-mainvisual {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/bg_contact.png");
+  background-image: url("../images/bg_contact.jpg");
   position: relative;
   background-position: center;
   height: 25rem;

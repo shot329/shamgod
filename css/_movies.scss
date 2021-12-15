@@ -1,7 +1,7 @@
 #movies {
   font-family: $japanese;
   .movies-mainvisual {
-    @include mainvisual("../images/bg_movies.png");
+    @include mainvisual("../images/bg_movies.jpg");
     .movies-mainvisual-box {
       @include mainvisual-box(#801617);
     }

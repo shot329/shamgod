@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 0;
   .contact-mainvisual {
-    @include mainvisual("../images/bg_contact.png");
+    @include mainvisual("../images/bg_contact.jpg");
     .contact-mainvisual-box {
       @include mainvisual-box(#818284);
     }

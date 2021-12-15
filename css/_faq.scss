@@ -1,6 +1,6 @@
 #faq {
   .faq-mainvisual {
-    @include mainvisual("../images/bg_faq.png");
+    @include mainvisual("../images/bg_faq.jpg");
     .faq-mainvisual-box {
       @include mainvisual-box($dark-red);
     }
