@@ -9,12 +9,21 @@
   .bg-text-even_movies {
     @include bg-text-even();
   }
-  .movie-contents {
+  .movies-contents {
     width: 100%;
-    @include lg {
-      width: auto;
+    .movies-alert {
+      font-size: 12px;
+      line-height: 1.75;
+      text-align: center;
+      margin-bottom: 25px;
+      span {
+        display: inline-block;
+      }
+      @include sm {
+        display: none;
+      }
     }
-    .movie-main {
+    .movies-main {
       display: flex;
       flex-direction: column;
       max-width: 44rem;

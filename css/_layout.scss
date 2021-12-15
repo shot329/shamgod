@@ -22,8 +22,12 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      height: calc(100% - 4rem);
-      margin-top: 4rem;
+      height: calc(100% - 2rem);
+      margin-top: 2rem;
+      @include md {
+        height: calc(100% - 4rem);
+        margin-top: 4rem;
+      }
       .side-logo {
         @include sm {
           width: 11rem;
@@ -46,11 +50,18 @@
       }
       .side-text {
         writing-mode: vertical-rl;
-        font-size: 1.2rem;
+        font-size: 12px;
         font-weight: bold;
         text-align: left;
+        font-size: 1.2rem;
+        font-size: 1.2rem;
+        font-size: 1.2rem;
         letter-spacing: 0.3em;
         line-height: 2rem;
+        padding: 1rem 0;
+        @include md {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -60,11 +71,14 @@
     @include sm {
       justify-content: center;
       text-align: center;
-      padding-top: 0;
+      padding: 0 0 16px 0;
+    }
+    @include md {
+      padding: 0 0 27px 0;
     }
     .cmn-icon-link {
       i {
-        font-size: 28px;
+        font-size: 30px;
         color: #fff;
         @include sm {
           color: #000;
@@ -75,12 +89,8 @@
           transition: .3s;
         }
       }
-      img {
-        height: 24px;
-        width: 24px;
-      }
       &:nth-child(n+2) {
-        margin-left: 2rem;
+        margin-left: 23px;
         @include sm {
           margin-left: 16px;
         }
@@ -106,8 +116,44 @@
       }
     }
   }
+  .cmn-link-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17rem;
+    padding: 18px 15px;
+    margin: 6rem auto 0;
+    background-color: #C10305;
+    @include sm {
+      width: 20rem;
+      padding: 2rem;
+      margin: 7rem auto 0;
+    }
+    @include md {
+      margin: 45px auto 0;
+    }
+    &.movies-btn {
+      margin: 3rem auto 0;
+      @include sm {
+        margin: 45px auto 0;
+      }
+    }
+    span {
+      font-family: $english;
+    }
+    span, i {
+      font-size: 14px;
+      color: #fff;
+      @include sm {
+        font-size: 16px;
+      }
+    }
+    &:hover {
+      opacity: .7;
+      transition: .3s;
+    }
+  }
   // main
-  // セクションタイトル(背景なし)
   main {
     width: 100%;
     @include sm {
@@ -178,7 +224,6 @@
   }
   // 背景色重ね
   &::after {
-    //   背景色重ね
     content: "";
     z-index: 10;
     opacity: 0.5;
